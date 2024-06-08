@@ -68,7 +68,7 @@ st.write("## Enter password ")
 passw = st.text_input(label="**Enter password**")
 st.button(label = "Submit")
 # st.write(passw)
-if passw == st.secrets["pass_arun"]:
+if passw == st.secrets["PASS_ARUN"]:
     with modal.container():
         perc = round(calc_percent("arun.csv"),2)
         if perc == 0:
@@ -100,7 +100,7 @@ if passw == st.secrets["pass_arun"]:
         ar_press = st.button(label = "**Add**",key="arun")
         if ar_press:
             add_count('arun.csv')
-elif passw ==st.secrets["pass_harsh"]:
+elif passw ==st.secrets["PASS_HARSH"]:
     with modal.container():
         perc = round(calc_percent("harsh.csv"), 2)
         if perc == 0:
