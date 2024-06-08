@@ -70,7 +70,7 @@ st.button(label = "Submit")
 # st.write(passw)
 if passw == st.secrets["PASS_ARUN"]:
     with modal.container():
-        perc = round(calc_percent("arun.csv"),2)
+        perc = round(100-calc_percent("arun.csv"),2)
         if perc == 0:
             emoji = ":face_vomiting:"
         elif perc>0 and perc<10:
@@ -95,14 +95,14 @@ if passw == st.secrets["PASS_ARUN"]:
             emoji = ":sunglasses:"
         else:
             emoji = ":star-struck:"
-        st.write("Percentage : "+str(100-perc)+"%  "+emoji)
+        st.write("Percentage : "+str(perc)+"%  "+emoji)
         st.write("today's count : "+str(today_count("arun.csv")))
         ar_press = st.button(label = "**Add**",key="arun")
         if ar_press:
             add_count('arun.csv')
 elif passw ==st.secrets["PASS_HARSH"]:
     with modal.container():
-        perc = round(calc_percent("harsh.csv"), 2)
+        perc = round(100-calc_percent("harsh.csv"), 2)
         if perc == 0:
             emoji = ":face_vomiting:"
         elif perc > 0 and perc < 10:
